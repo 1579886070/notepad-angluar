@@ -1,0 +1,31 @@
+<div class="content">
+    <div style="text-align: center;">
+        <h2>修改信息</h2>
+      </div>
+    <mat-form-field>
+        <input  disabled="disabled" matInput placeholder="账号" type="number" [(ngModel)]="user.userName" value="{{user.userName}}">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <input matInput placeholder="昵称" type="text" [(ngModel)]="user.nickName">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <input matInput placeholder="个人说明" type="text" [(ngModel)]="user.note">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <input matInput placeholder="旧密码" type="password" [(ngModel)]="user.password">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <input matInput placeholder="新密码" type="password" [(ngModel)]="user.confirmPassword">
+    </mat-form-field>
+
+    <div>
+        <span style="color: red;" *ngIf="prompt.state">{{prompt.msg}}</span>
+    </div>
+
+    <br>
+    <button mat-stroked-button color="warn" (click)="update()">更新</button>
+</div>

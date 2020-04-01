@@ -1,0 +1,14 @@
+.content {
+    /* padding: 10px 0px; */
+    padding: 50px;
+    /* border:1px solid lightgray; */
+    text-align: center;
+}
+.content input{
+    width:100%;
+	height:30px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}

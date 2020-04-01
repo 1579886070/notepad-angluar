@@ -1,0 +1,20 @@
+<div class="content">
+    <div style="text-align: center;">
+      <span style="color: red;" *ngIf="prompt.state">{{prompt.msg}}</span>
+  </div>
+  
+    <div style="text-align: center;">
+      <h2>文章发表</h2>
+    </div>
+    <mat-form-field>
+      <input matInput placeholder="文章标题" type="text" [(ngModel)]="article.title">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="分类" [(ngModel)]="article.category">
+        <mat-option value="{{item}}" *ngFor="let item of articleCategory">{{item}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <ckeditor [editor]="Editor" [(ngModel)]="article.content" [config]="config"></ckeditor>
+    <button mat-stroked-button color="warn" (click)="updateData()">修改</button>
+  </div>

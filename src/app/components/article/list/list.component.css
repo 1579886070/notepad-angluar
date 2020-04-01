@@ -1,0 +1,28 @@
+.content {
+    padding: 50px 0px;
+    margin: auto;
+    text-align: center;
+    width: 70%;
+  }
+  
+  .mat-card {
+    background: none;
+  }
+  
+  .mat-card-title {
+    display: block;
+    margin-bottom: 3px;
+  }
+  
+  .navigation {
+    padding: 10px;
+  }
+  
+  .mat-fab.mat-accent {
+    background-color: dimgray;
+  }
+  
+  .right {
+    margin-left: 50px;
+  }
+  

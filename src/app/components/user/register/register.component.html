@@ -1,0 +1,23 @@
+<div class="content">
+    <div style="text-align: center;">
+        <h2>注册</h2>
+      </div>
+    <mat-form-field>
+        <input matInput placeholder="请输入账号(仅数字)" type="number" [(ngModel)]="user.userName">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <input matInput placeholder="请输入密码" type="password" [(ngModel)]="user.password">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <input matInput placeholder="请确定密码" type="password" [(ngModel)]="user.confirmPassword">
+    </mat-form-field>
+
+    <div>
+        <span style="color: red;" *ngIf="prompt.state">{{prompt.msg}}</span>
+    </div>
+
+    <br>
+    <button mat-stroked-button color="primary" (click)="register()">注册</button>
+</div>
